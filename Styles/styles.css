@@ -11,6 +11,13 @@ body {
   --primary-color: #ff42a5;
 }
 
+.gradient-color {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .btn-primary-1 {
   border: none;
   border-radius: 48px;
@@ -136,11 +143,41 @@ svg {
   font-weight: 500;
   text-transform: lowercase;
 }
-.banner-buttons{
+.banner-buttons {
   margin-top: 20px;
 }
 
+/* funny videos styles */
+.funny-videos-container {
+  width: 75%;
+  margin: 0 auto;
+}
+.funny-videos-title {
+  margin-top: 120px;
+  margin-bottom: 1rem;
+  color: #0b0223;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+.funny-videos-description {
+  color: #534c64;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.funny-videos-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: space-around;
+  margin: 40px 0;
+}
 
+.funny-videos-images img {
+  justify-self: center;
+  width: 100%;
+}
 
 @media screen and (max-width: 576px) {
   /* Responsive nav for mobile */
@@ -186,8 +223,8 @@ svg {
     padding-top: 70px;
     padding-bottom: 70px;
   }
-  .mobile{
-    background-image: url("../images/Group\ 14.png");      
+  .mobile {
+    background-image: url("../images/Group\ 14.png");
     background-position: center;
     background-size: cover;
     display: flex;
@@ -246,6 +283,22 @@ svg {
   .banner-buttons {
     margin-top: 20px;
   }
+  /* Responsive Funny Video Section for mobile */
+  .funny-videos-title{
+    margin-top: 60px;
+  }
+  .funny-videos-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 40px 0;
+  }
+  .image-card > p {
+    text-align: center;
+    color: #534c64;
+    font-size: 1rem;
+    font-weight: 500;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
@@ -292,8 +345,8 @@ svg {
     padding-top: 70px;
     padding-bottom: 70px;
   }
-  .mobile{
-    background-image: url("../images/Group\ 14.png");      
+  .mobile {
+    background-image: url("../images/Group\ 14.png");
     background-position: center;
     background-size: cover;
     display: flex;
@@ -356,9 +409,25 @@ svg {
     margin-left: auto;
     margin-right: auto;
   }
-  .banner-buttons{
+  .banner-buttons {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
   }
+    /* Responsive Funny Video Section for tablet */
+    .funny-videos-title{
+        margin-top: 60px;
+      }
+      .funny-videos-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin: 40px 0;
+      }
+      .image-card > p {
+        text-align: center;
+        color: #534c64;
+        font-size: 1rem;
+        font-weight: 500;
+      }
 }
