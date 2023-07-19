@@ -178,45 +178,51 @@ svg {
   margin: 40px 0;
 }
 
+.play-button-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff42a5;
+}
+
 .funny-videos-images .game-image {
   justify-self: center;
   width: 100%;
   cursor: pointer;
+  height: 100%;
+}
+.play-button img {
+  display: block;
+  margin: 0 auto;
+}
+.play-button {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
-
-.play-button{
-    position: absolute;
-    right: 0;
-    top: 40%;
-    width: 100%;
-    opacity: 0;
-    cursor: pointer;
+.image-card:hover .game-image{
+  outline: 5px solid #ff42a5;
+  border-radius: 16px;
+  opacity: 0.5;
 }
-.play-button:hover{
-    
+.image-card:hover .play-button {
+  opacity: 1;
 }
 
-.image-card .game-image:hover{
-    outline: 3px solid #FF42A5;
-    border-radius: 16px;
-    opacity:0.5;
+.black-layer {
+  background-color: #000;
+  border-radius: 16px;
+  height: auto;
+  display: flex;
+  align-items: end;
 }
-.image-card:hover .play-button{
-    opacity: 1;
+.image-card {
+  position: relative;
 }
-
-
-
-
-.black-layer{
-    background-color: #000;
-    border-radius: 16px;
-}
-.image-card{
-    position: relative;
-}
-
 
 /* Play instantly section styles */
 .play-instantly-container {
@@ -482,28 +488,27 @@ svg {
     width: 100%;
   }
   /* Responsive Genre Section for mobile */
-    .genre-section{
-        padding: 50px;
-    }
-    .genre-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .genre{
-        gap: 4px;
-        padding: 0;
-        justify-content: center;
-        padding-left: 1px;
-
-    }
-    .genre-title {
-        font-size: 0.5rem;
-        font-weight: 600;
-        width: 60%;
-      }
-      .genre img{
-        width: 20%;
-      }
+  .genre-section {
+    padding: 40px;
+  }
+  .genre-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .genre {
+    gap: 4px;
+    padding: 0;
+    justify-content: center;
+    padding-left: 1px;
+  }
+  .genre-title {
+    font-size: 0.5rem;
+    font-weight: 600;
+    width: 60%;
+  }
+  .genre img {
+    width: 20%;
+  }
 
   /* Footer Responsive for mobile */
   .footer-container {
@@ -685,13 +690,12 @@ svg {
     width: 100%;
   }
   /* Responsive genre for tablet */
-  .genre-section{
-    padding: 100px;
-}
-.genre-container{
+  .genre-container {
     display: grid;
     grid-template-columns: repeat(3, 3fr);
-}
+
+    
+  }
 
   /* Footer Responsive for tablet */
   .footer-container {
