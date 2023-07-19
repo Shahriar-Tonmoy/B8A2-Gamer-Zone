@@ -178,10 +178,46 @@ svg {
   margin: 40px 0;
 }
 
-.funny-videos-images img {
+.funny-videos-images .game-image {
   justify-self: center;
   width: 100%;
+  cursor: pointer;
 }
+
+
+.play-button{
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.play-button:hover{
+    
+}
+
+.image-card .game-image:hover{
+    outline: 3px solid #FF42A5;
+    border-radius: 16px;
+    opacity:0.5;
+}
+.image-card:hover .play-button{
+    opacity: 1;
+}
+
+
+
+
+.black-layer{
+    background-color: #000;
+    border-radius: 16px;
+}
+.image-card{
+    position: relative;
+}
+
+
 /* Play instantly section styles */
 .play-instantly-container {
   display: flex;
@@ -233,11 +269,12 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  justify-content: space-around;
+  justify-content: center;
 }
 .genre {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   background-color: #fff;
   cursor: pointer;
@@ -255,6 +292,49 @@ svg {
 }
 .genre:hover .genre-title {
   color: #ff42a5;
+}
+/* Footer Styles */
+.footer h3 {
+  width: max-content;
+}
+.footer .nav-logo {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.footer {
+  background-color: #0b0223;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 120px 0px;
+}
+.links p {
+  color: white;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.social {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: 20px auto;
+  gap: 60px;
+}
+.footer p {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 576px) {
@@ -402,40 +482,50 @@ svg {
     width: 100%;
   }
   /* Responsive Genre Section for mobile */
-  .genre-section {
-   border: 1px solid;
-   padding: 0;
+    .genre-section{
+        padding: 50px;
+    }
+    .genre-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .genre{
+        gap: 4px;
+        padding: 0;
+        justify-content: center;
+        padding-left: 1px;
+
+    }
+    .genre-title {
+        font-size: 0.5rem;
+        font-weight: 600;
+        width: 60%;
+      }
+      .genre img{
+        width: 20%;
+      }
+
+  /* Footer Responsive for mobile */
+  .footer-container {
+    width: 85%;
   }
-  .genre-container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    border: 1px solid; 
+  .links {
+    gap: 60px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
   }
-  .genre {
-    display: flex;
+  .links p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .social {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    justify-content: center;
     align-items: center;
-    /* gap: 16px; */
-    background-color: #fff;
-    flex-wrap: wrap;
-    cursor: pointer;
-    border-radius: 50px;
-    padding: 10px 20px 10px 10px;
-    width: calc(100%/3);
-  }
-  .genre-image{
-    width: 20%;
-  }
-  .genre-title {
-    color: #0b0223;
-    font-size: 0.5rem;
-    font-weight: 600;
-  }
-  .genre:hover {
-    outline: 1px solid #ff42a5;
-  }
-  .genre:hover .genre-title {
-    color: #ff42a5;
+    align-content: center;
+    gap: 80px;
   }
 }
 
@@ -593,5 +683,37 @@ svg {
   }
   .play-instantly-images .large-image {
     width: 100%;
+  }
+  /* Responsive genre for tablet */
+  .genre-section{
+    padding: 100px;
+}
+.genre-container{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+}
+
+  /* Footer Responsive for tablet */
+  .footer-container {
+    width: 85%;
+  }
+  .links {
+    gap: 80px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  .links p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .social {
+    margin-top: 60px;
+    flex-flow: row wrap;
+    margin-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 80px;
   }
 }
